@@ -11,7 +11,9 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection With MongoDB
-mongoose.connect("mongodb+srv://ecommerce:ecommerce@cluster0.zvmet5h.mongodb.net/e-commerce")
+mongoose.connect("mongodb://localhost:27017/e-commerce")
+.then(()=>{console.log("database connect successfully");})
+.catch((err)=>{console.log(err);})
 
 //API Creation
 
@@ -22,10 +24,9 @@ app.get("/",(req,res)=>{
 // Image Storage Engine
 
 const storage = multer.diskStorage({
-
 destination: './upload/images',
 filename:(req,file,cb)=>{
-    return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originamname)}`)
+    return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
 }
 })
 
@@ -38,7 +39,7 @@ filename:(req,file,cb)=>{
     app.post("/upload",upload.single('product'),(req,res)=>{
         res.json({
             success: 1,
-            image_url :`http://localhost:${port}/images/{req.file.filename}`
+            image_url :`http://localhost:${port}/images/${req.file.filename}`
     })
 })
 
@@ -82,10 +83,10 @@ const Product = mongoose.model( "Product" , {
 app.post('/addproduct' , async (req,res)=>{
     let products = await Product.find({});
     let id;
-    if(product.length>0)
+    if(products.length>0)
         {
             let last_product_array = products.slice(-1);
-            let last_product = last_products_array[0];
+            let last_product = last_product_array[0];
             id = last_product.id+1;
         }
     else
@@ -114,7 +115,7 @@ app.post('/addproduct' , async (req,res)=>{
 //creating API for deleting Products
 
 app. post('/removeproduct', async (req,res)=>{
-    await product.findOneAndDelete({id:req.body.id});
+    await Product.findOneAndDelete({id:req.body.id});
     console.log("Removed");
     res.json({
         success:true,
@@ -165,13 +166,12 @@ app.post('/signup', async (req, res)=>{
         cart[i]=0;
     }
     const user = new Users({
-        name:req.body.username,
+        name:req.body.name,
         email:req.body.email,
         password:req.body.password,
-        cartData:cart,
+        cartData: cart,
     })
     await user.save();
-
     const data = {
         user: {
           id:user.id

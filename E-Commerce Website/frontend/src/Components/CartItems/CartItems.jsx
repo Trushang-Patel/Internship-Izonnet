@@ -26,20 +26,19 @@ const CartItems = () => {
                     <p>${e.new_price}</p>
                     <button className='cartitems-quantity'>{cartItems[e.id]}</button>
                     <p>${e.new_price*cartItems[e.id]}</p>
-                    <img className="cartitems-remove" src={remove_icon}  onClick={()=>{removeFromCart(e.id)}} alt="" />
+                    <img className="cartitems-remove-icon" src={remove_icon}  onClick={()=>{removeFromCart(e.id)}} alt="" />
                     </div>
                 </div>
             }
-            else{
+            
                 return null;
-            }
         })}
         <div className="cartitems-down">
-            <div className="cartitems-tota1">
+            <div className="cartitems-total">
                 <h1>cart Totals</h1>
                  <div>
                 <div className='cartitems-total-item'>
-                    <p>Subtatal</p>
+                    <p>Subtotal</p>
                     <p>${ getTotalCartAmount()}</p>
                 </div>
             <hr/>
@@ -50,7 +49,7 @@ const CartItems = () => {
             <hr/>
             <div className='cartitems-total-item'>
                 <h3>Total</h3>
-                <h3>${ getTotalCartAmount}</h3>
+                <h3>${ getTotalCartAmount()}</h3>
             </div>
             </div> 
             <button className='cartitems-checkout'>Proceed to checkout</button>

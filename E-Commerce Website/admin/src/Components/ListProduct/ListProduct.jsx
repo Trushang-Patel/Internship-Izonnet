@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './ListProduct.css'
 import cross_icon from '../../assets/cross_icon.png'
 
@@ -17,7 +17,7 @@ const ListProduct = () => {
   },[])
 
   const remove_product = async (id)=>{
-    await fetch('http://localhost:4000/remove_product',{
+    await fetch('http://localhost:4000/removeproduct',{
       method: 'POST',
       headers:{
         Accept:'aoolication/json',

@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import './AddProduct.css'
 import upload_area from '../../assets/upload_area.svg'
 
@@ -14,6 +14,7 @@ const AddProduct = () => {
     })
 
     const imageHandler = (e) =>{
+      console.log("Image Handler");
         setImage(e.target.files[0]);
     }
 
@@ -83,9 +84,9 @@ const AddProduct = () => {
     <label htmlFor="file-input">
     <img src={image?URL.createObjectURL(image):upload_area} className='addproduct-thumnail-img' alt="" />
     </label>
-    <input onChanage={imageHandler} type="file" name='image' id='file-input' hidden/>
+    <input onChange={imageHandler} type="file" name='image' id='file-input' hidden/>
     </div>
-    <button onClick={()=>{Add-Product()}} className='addprouct-btn'>ADD</button>
+    <button onClick={()=>{Add_Product()}} className='addprouct-btn'>ADD</button>
     </div>
   )
 }
