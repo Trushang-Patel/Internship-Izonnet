@@ -10,292 +10,221 @@ This repository documents my one-month summer internship experience at Izonnet W
 
 ## 📝 Day-by-Day Progress
 
-### Day 1: Creating AWS Free Tier Account
-- Introduction to the MEAN stack, its components, and setup.
-- Installing and setting up MongoDB, and understanding its basics.
-- Creating a simple MongoDB database and  performing CRUD operations.
+### Day 1:
+➠Introduction to the MEAN stack, its components, and setup.
 
+➠ Installing and setting up MongoDB, and understanding its basics.
 
-### Day 2: creating instance with apache server to deploy web page
+➠ Creating a simple MongoDB database and  performing CRUD operations.
+
+### Day 2:
 ➠Introduction to Node.js and its environment 
 
 ➠ Learning the basics of Express.js and setting up a server 
 
-➠ Installed an Apache Web Server on the Linux Instance (Task 7):
-- Once connected, I installed Apache, a widely-used open-source web server software. Apache is crucial for serving web pages to users. The installation involved updating the package repositories and using package management commands to install Apache on the Linux-based EC2 instance.
+➠ Building a RESTful API with Express.js and MongoDB 
 
-➠ Commands : 
-- sudo su-to elevate your credentials to root
-- yum install -y httpd- to install apache web server(Linux server)
-- cd /var/www/html- to create a HTML file into directory
 
-➠Deployed a Personal page.html on Apache (Task 8):
-- With Apache running, I deployed a simple HTML page (Personalpage.html). This involved placing the HTML file in Apache’s root directory and 
-  configuring the server to serve this page. Deploying the HTML page allowed me to create a personal webpage accessible over the internet via 
-  the EC2 instance's public IP address.
+### Day 3:
 
-### Day 3: Building the Portfolio
+➠ Advanced Node.js concepts: asynchronous programming, event loop 
 
-➠ Setting Up the Project Structure:
-- Created a project directory on the EC2 instance for the portfolio website. This included folders for HTML, CSS, JavaScript, and assets like images and fonts.
-- Initialized the project with a basic index.html file to serve as the homepage.
+➠ Middleware in Express.js for error handling and logging 
 
-➠ Creating the HTML Structure:
-- Developed the initial structure of the portfolio using HTML5. This involved creating sections for the header, about me, projects, and contact information.
-- Ensured the HTML code was semantic and well-organized to improve readability and SEO.
+➠ Implementing user authentication with JWT in the MEAN stackExpress.js and MongoDB 
 
-➠ Integrating Bootstrap:
-- Incorporated Bootstrap, a popular CSS framework, to make the portfolio responsive and visually appealing.
-Used Bootstrap components like navigation bars, cards, and buttons to enhance the design and functionality of the website.
-
-### Day 4: Enhancing with JavaScript, SASS, and CSS
-
-➠Adding Interactivity with JavaScript:
-- Implemented JavaScript to add interactive features to the portfolio, such as form validation for the contact section and dynamic content loading for the projects section.
-Utilized event listeners and DOM manipulation to create a more engaging user experience.
-
-➠ Styling with SASS and CSS:
-- Used SASS (Syntactically Awesome Style Sheets) to write more maintainable and modular CSS code. SASS variables, nesting, and mixins helped streamline the styling process.
-- Compiled SASS files into CSS and applied custom styles to enhance the visual aesthetics of the portfolio. This included customizing Bootstrap themes and adding unique design elements.
-
-➠ Finalizing the Deployment:
-- Ensured all the files were correctly linked and the website was functioning as intended.
-- Tested the portfolio on different browsers and devices to ensure compatibility and responsiveness.
-
-➠Technologies Explored
-- HTML5: Structured the content and elements of the portfolio.
-- Bootstrap: Provided a responsive and modern design framework.
-- JavaScript: Added interactivity and dynamic functionality to the website.
-- SASS: Enhanced the CSS with advanced features for better maintainability and efficiency.
-- CSS: Styled the website to improve visual appeal and user experience.
-
-### Day 5: Configuration and final Touchup
-- Configured the Security Group for the Apache server on the EC2 instance to accept incoming connections on port 80. This involved adding an inbound rule in the Security Group settings to allow HTTP traffic, ensuring that the web server is accessible from the internet.(Task 9)
-
-- Verified the configuration by accessing the personal webpage hosted on the EC2 instance. Used the public IP address of the instance in a web browser to confirm that the Apache server is serving the webpage correctly. This demonstrated successful setup and configuration of the web server.(Task 10)
-
-- Here is the finalised link : http://52.63.0.141/personalpage.html
 
 ## Notes:
-➠We were given this repo which contains basic documentation of AWS services which can be helpful to everybody --
-https://github.com/hamidgholami/accp-cheatsheet
-
+➠For this week, we will start watching videos from Thapa Technical.
 ## 2️⃣ week 2
 
-### *4th June 2024*
-- *Online Session*: Learning about storage and S3 with its related services ,also swictching from EC2 to S3
-- In the start of meeting we were asked rapid questions regarding week 1 task.
-  ![AWS Cloudfront](https://media.licdn.com/dms/image/C4E12AQEYszsOFAPr5w/article-cover_image-shrink_423_752/0/1604073753428?e=1723680000&v=beta&t=jL2yIMG8R1YzgOTl7VSfr4YN6m50WtYwZTvAFLipRRE)
-
-
-### *Here is the Outine of Week-2:*
-1. Create a Bucket
-2. Make it private
-3. Upload files
-4. Encrypt the files
-5. Create a Distribution 
-6. Integrate it with S3
-7. Create a new KMS Key
-8. Change the Default Key for your bucket to this new key
-9. Find out these events and logs for them in Cloudtrail
-10. Shutdown the EC2 instance we created in first week
+### *20th May 2024*
 
 ## 📝 Day-by-Day Progress
 
-### Day 1: Creating and Configuring an S3 Bucket
-➠ Created a new S3 bucket:
-- I started by creating a new Amazon S3 bucket. Amazon S3 is a scalable object storage service that allows for the storage and retrieval of any amount of data at any time.
+### Day 1:
+➠ Introduction to JSX and Actual browser running using babel
  
-➠ Set the bucket's permissions to private:
-- Ensured the bucket's security by setting its permissions to private, making sure that only authorized users have access to the stored data.
+➠Mini project for creating List of 5 Movie and display in web 
   
-➠ Uploaded files to the bucket:
-- Uploaded various files to the S3 bucket to test storage and retrieval capabilities. This provided hands-on experience with S3's upload functionalities and permissions settings.
+➠ How to use JS in JSX and Template Literals 
 
-### Day 2: Securing and Distributing Content
-➠ *Enabled encryption for the uploaded files*:
-  - To enhance data security, I enabled server-side encryption for the files uploaded to the S3 bucket. This ensures that data is encrypted at rest, protecting it from unauthorized access.
+### Day 2:
+➠Creating a web page that show name Today’s date and current time using JSX element
     
-➠ *Created a CloudFront distribution and integrated it with the S3 bucket*:
-  - Created an Amazon CloudFront distribution to deliver content stored in the S3 bucket with low latency and high transfer speeds. This involved setting up the distribution and linking it to the S3 bucket, demonstrating how CloudFront can improve content delivery performance.
+➠ create a web site that generate 3 random image and add CSS Stying(External)
 
-- CDN(Content Delivery Network) --
+➠  Learn About Inline CSS styling 
 
-<img src="https://d1.awsstatic.com/products/cloudfront/product-page-diagram_CloudFront_HIW.475cd71e52ebbb9acbe55fd1b242c75ebb619a2e.png" width="550" height="300"/>
 
-### Day 3: Advanced Security and Monitoring
+### Day 3:
 
-➠ Created a new KMS key:
-- Created a new AWS Key Management Service (KMS) key to manage encryption keys. KMS provides centralized control over encryption keys, enhancing data security.
+➠  Learn about components and why the use. 
    
-➠ Changed the default encryption key for the S3 bucket to the new KMS key:
-- Configured the S3 bucket to use the newly created KMS key for default encryption. This ensures that all future objects uploaded to the bucket are encrypted using the KMS key, providing an additional layer of security.
+➠ Implement the Components and create a simple website for greeting.
    
-➠ Used CloudTrail to track events and logs related to the S3 bucket and other activities:
-- Utilized AWS CloudTrail to monitor and log activities related to the S3 bucket. CloudTrail provides visibility into API calls and user actions, aiding in compliance and security analysis.
-   
-➠ Shut down the EC2 instance created in Week 1:
-- As part of resource management and cost control, I shut down the EC2 instance that was set up during the first week. This practice helps avoid unnecessary charges and optimizes resource usage.
+➠  Above created website we modify that code and create using components.
+  
+### Day 4:
 
-### In Day 4-5 i was supposed to explore and learn new services in brief by my own
-
-### Day 4: Discovering AWS Athena's Capabilities
-
-➠ Explored the versatility of SQL queries in AWS Athena
-  - Investigated the range of SQL queries possible in AWS Athena, understanding how it interacts with data stored in S3 and the types of analysis that can be performed.
+➠  Learn about how to use Google fonts in our react project and props 
+      
+➠ Hooks in React js and using Hooks create a digital clock 
     
-➠ Examined data partitioning strategies*:
-  - Studied various data partitioning strategies and their impact on query performance in Athena, gaining insights into how partitioning contributes to cost savings.
-    
-➠ Learned about AWS Glue Data Catalog integration
-  - Explored how AWS Glue Data Catalog serves as a central metadata repository and how it integrates with Athena to make S3 data easily searchable and queryable.
+➠Event Handling and Forms in React js 
 
-### Day 5: Exploring Data Integration and Orchestration
+### Day 5:
 
-➠ Investigated AWS Glue's ETL capabilities
-  - Researched AWS Glue's ETL features, understanding how it automates the extraction, transformation, and loading of data for analytics.
+➠ How to use Material UI in our Project 
     
-➠ Familiarized with AWS Step Functions' orchestration
-  - Learned about AWS Step Functions and its ability to coordinate multiple AWS services into serverless workflows, grasping the basics of service orchestration.
-    
-➠ Reviewed error handling in Step Functions workflows*:
-  - Reviewed best practices for implementing error handling in Step Functions workflows, appreciating the importance of resilience in service orchestration.
+➠  How to install and use bootstrap
+
+➠ Learn React Router 
 
 ## 3️⃣ week 3
 
-### 12th June 2024
-- Online Session: Introduction to AWS DynamoDB, API Gateway, and Lambda Functions
-- This week focused on building a serverless backend using AWS services like DynamoDB, API Gateway, and Lambda Functions. We worked on a project to create CRUD APIs for managing items in a DynamoDB table.
-
-  <img src="https://media.licdn.com/dms/image/D5612AQFMBfd4HnZ0Iw/article-cover_image-shrink_720_1280/0/1699630089018?e=1724284800&v=beta&t=eG1tqVAl1EvKAu9J4LmAqAmFE5uxPQReQJEz88P8xiA" width="550" height="300"/>
-
-
-### Here is the Outline of Week-3:
-1. Create a table in DynamoDB
-2. Write a Lambda Function as a Backend
-3. Configure API Endpoints on API Gateway
-4. Get /items
-5. Put /items
-6. Get /items/{id}
-7. Delete /items/{id}
-8. Configure API Endpoints with Lambda Code
-9. Test Out APIs through Curl and Browser
+### 27 May 2024
 
 ## 📝 Day-by-Day Progress
 
-### Day 1: Creating a Table in DynamoDB
+### Day 1: 
 
-➠ Create a table in DynamoDB
-- Created a new table in Amazon DynamoDB. DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale. I configured the table with a primary key and other necessary attributes to store item data efficiently.
+➠  Create a top 5 Netflix series in 2024 website and use basic concepts
 
-  ### Day 2: Writing Lambda Functions
+➠ Replace simple method of Array with Mapping and add Movie and Solve error of image component
+
+➠Add CSS styling  
+
+  ### Day 2: 
   
-➠ Write a Lambda Function as a Backend
-- Developed a Lambda function to serve as the backend logic for our CRUD operations. AWS Lambda allows you to run code without provisioning or managing servers. The function was written in Python and included logic to interact with DynamoDB for various operations like retrieving, inserting, updating, and deleting items.
+➠  Create a Calculator 
 
-### Day 3: Configuring API Endpoints
+➠ To learn about Context API 
 
-➠ Configure API Endpoints on API Gateway
-- Set up API Gateway to expose our Lambda functions as RESTful API endpoints. Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale. Configured the endpoints for the various CRUD operations.
+➠  Introduction to Express JS and how to install express js
 
-### Day 4: Implementing CRUD Operations
+### Day 3: 
 
-➠ *Get /items
-- Configured the GET /items endpoint to retrieve all items from the DynamoDB table. This endpoint interacts with the Lambda function to fetch and return the list of items.
+➠ Express JS routing and how to send HTML and JSON data as a Response 
 
-➠ Put /items
-- Set up the PUT /items endpoint to add new items to the DynamoDB table. The Lambda function processes the incoming request and inserts the new item into the table.
+➠ Serve HTML CSS & JS Files in Express JS | Middleware in Express JS 
 
-➠ Get /items/{id}
-- Implemented the GET /items/{id} endpoint to retrieve a specific item by its ID. The Lambda function uses the ID parameter to query DynamoDB and return the requested item.
+➠ Template Engine (Pug, hbs, EJS)
 
-➠ Delete /items/{id}
-- Configured the DELETE /items/{id} endpoint to remove an item from the DynamoDB table based on its ID. The Lambda function handles the deletion process and ensures the item is removed.
+### Day 4:
 
-➠ Configure API Endpoints with Lambda Code
-- Linked the API Gateway endpoints with the corresponding Lambda functions. This integration allows API Gateway to invoke the correct Lambda function for each API request, ensuring the backend logic is executed properly.
+➠ Customizing the Views Directory in Express JS and Using Partials
+    
+➠ Add 404 error page in Dynamic Website using Express JS, Adding Responsive Styles to Complete Dynamic Website using CSS in Express Website  
 
-➠ Test Out APIs through Curl and Browser
-- Tested the configured APIs using curl commands and a web browser to ensure they work as expected. Verified that the CRUD operations (Create, Read, Update, Delete) perform correctly and that the APIs return the appropriate responses for different scenarios.
+➠ Introduction to MongoDB 
 
+### Day 5:
+
+➠ Installation of MongoDB 
+    
+➠ MongoDB CRUD operation and test various features   
+
+➠ Install MongoDB GUI (MongoDB Compass) , how to connect MongoDB. 
 
 ## 4️⃣ week 4
 
-### *21st June 2024*
-- *Online Session*: Introduction to AWS Bedrock, S3, and Knowledge Base Integration
-- This week focused on building a knowledge base using AWS Bedrock, creating a vector store for efficient data retrieval, and interacting with the knowledge base using an agent.
-
-  <img src="https://community.aws/_next/image?url=https%3A%2F%2Fassets.community.aws%2Fa%2F2Z6yg51zfyrwr7WzyFJ4zNsUukb.png%3FimgSize%3D2772x1102&w=3840&q=75" width="550" height="300"/>
-
-### *Here is the Outline of Week-4:*
-1. Create a Bucket
-2. Upload my Resume
-3. Create Knowledge Base in BedRock
-4. Link S3 Bucket Object (Resume) with this Knowledge Base
-5. Create Vector Store using Embeddings and Data Source
-6. Test Knowledge Base using Generate Responses
-7. Test Knowledge Base without using Generate Responses
-8. Create an Agent
-9. Connect it with Knowledge Base
-10. Interact with your Resume
+### *03rd June 2024*
 
 ## 📝 Day-by-Day Progress
 
-### Day 1: Setting Up the S3 Bucket and Uploading Resume
+### Day 1: 
 
-➠ Create a Bucket
-- Created a new S3 bucket for storing objects. Amazon S3 is a scalable object storage service that allows for the storage and retrieval of any amount of data at any time.
+➠   Introduction about our Project. 
 
-➠ Upload my Resume
-- Uploaded my resume to the S3 bucket. This step is crucial for linking the resume to the knowledge base in Bedrock.
+➠   Setup MongoDB, React, Express and node js for our project and solve MongoDB connection error
 
-### Day 2: Creating and Linking Knowledge Base in Bedrock
+➠   Create Navbar add apply CSS 
 
-➠ Create Knowledge Base in BedRock
-- Created a knowledge base in AWS Bedrock. Bedrock is used for building intelligent applications with comprehensive knowledge management and natural language understanding capabilities.
+### Day 2: 
+  
+➠  Solve error corresponding to CSS (CSS not apply on the class) 
 
-➠ Link S3 Bucket Object (Resume) with this Knowledge Base
-- Linked the uploaded resume from the S3 bucket to the knowledge base. This allows Bedrock to use the resume as a data source for generating responses.
+➠  Create Route for Projects
 
-### Day 3: Building and Testing the Vector Store
+➠  I collect all the `picture (or photo) for my ecommerce website.
 
-➠ Create Vector Store using Embeddings and Data Source
-- Created a vector store using embeddings to enable efficient data retrieval. This involved transforming the resume data into vector embeddings that Bedrock can use for quick search and retrieval.
+### Day 3: 
 
-➠est Knowledge Base using Generate Responses
-- Tested the knowledge base by generating responses from the linked resume data. This helped verify that the knowledge base correctly understands and retrieves information from the resume.
+➠ Create Shop page 
 
-➠ Test Knowledge Base without using Generate Responses
-- Conducted tests on the knowledge base without using the generate response feature to ensure it can handle direct queries and return accurate information.
+➠ Add CSS Styling in shop page  
 
-### Day 4: Creating and Connecting an Agent
+➠  Creating Popular item for shop in shop page
 
-➠Create an Agent
-- Created an agent in AWS Bedrock. Agents in Bedrock are responsible for interacting with users and providing responses based on the knowledge base.
+### Day 4:
 
-➠Connect it with Knowledge Base
-- Linked the created agent with the knowledge base to enable it to access and retrieve information from the resume stored in S3.
+➠  Add CSS styling in Popular Page 
+    
+➠ Create a Exclusive offers for customer
 
-### Day 5: Interacting with the Resume
+➠ Add CSS for Exclusive offers for customer  
 
-➠Interact with your Resume
-- Interacted with the resume through the agent. This involved querying the agent to retrieve specific information from the resume, ensuring the setup was functional and effective.
+### Day 5:
 
-## Problems faced after few Days of competion of Internship
+➠ Add new Collection Field in my project
+    
+➠ Apply CSS property to New Collection 
 
-- After completion of Internship on 30 June I came across the mails that my billing charges are getting than we are expecting.
-- Then I contact Amit Aurora sir and he helped me and we come to know that my bedrock,KMS,Agent Services are still on.
-- then we conatact to AWS support and wrote them that we are student and we were exploring the servies and went dee,it was not intentionally
-- then we go reply for few days and i reply them back everyday like they were mailing me to xyz servies are still on and terminate them
-- iused to terminate them accordingly and sending them attachment for proof and on 15 july the billing things was sorted out
-- all thnaks to AWS and Amit sir for Guiding me
+➠ Create a newsletter component and
+
+##  week 5
+
+### *10th June 2024*
+
+## 📝 Day-by-Day Progress
+
+### Day 1: 
+
+➠   Create Breadcrum and add CSS styling in it.
+
+➠   Create cart item For the Website 
+
+➠   Create Shop Context for the website
+
+  ### Day 2: 
+  
+➠  Create Product Display page for Website and add CSS styling. 
+
+➠  Create Related Product components and add CSS styling
+
+➠   Create  a Description  box for the website and add CSS styling  
+
+### Day 3: 
+
+➠ Create Admin for the website and add Product component 
+
+➠  Create a Navigation bar and sidebar for the admin. 
+
+➠  Create Product List for the Admin 
+
+### Day 4:
+
+➠   Connect Backend with MongoDB 
+    
+➠ C Create Image store engine and uploading endpoint for images 
+
+➠ Create Schema for Product and user model.  
+
+### Day 5:
+
+➠  Create a API for add product
+    
+➠  Create a backend part for login, section fetch data etc. 
+
+➠ Create a backend for Cart.
 
 
 ## 🤝 Connect with Me
 
-- LinkedIn: [[https://www.linkedin.com](https://www.linkedin.com/in/viken-hadavani-27b6412b3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bc%2BtFz8i0SqaVmf395szcFw%3D%3D)]
+- LinkedIn: [[https://www.linkedin.com](https://www.linkedin.com/in/trushang-patel-93745425a/)]
 
-- Email: [vikenhadavani@gmail.com]
+- Email: [trushangpatel282@gmail.com]
 
 
 Thank you for visiting my project! Feel free to reach out if you have any questions or feedback. ✨
